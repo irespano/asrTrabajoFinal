@@ -1,0 +1,12 @@
+---
+applications:
+- name: asrTrabajoFinalMartaIrene
+  random-route: false
+  path: target/asrTomcatEjemploCloudant.war
+  memory: 640M
+  instances: 1
+  host: asrTrabajoFinalMartaIrene
+  domain: eu-de.mybluemix.net
+  services:
+  - Irene-cloudantNoSQLDB
+  - Languaje Translator-MI
