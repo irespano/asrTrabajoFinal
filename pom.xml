@@ -80,11 +80,11 @@
 	  <version>6.11.0</version>
 	</dependency>
 	
-	<dependency>
-      <groupId>com.ibm.watson.developer_cloud</groupId>
-      <artifactId>language-translator</artifactId>
-      <version>6.11.0</version>
-    </dependency>
+<!-- 	<dependency> -->
+<!--       <groupId>com.ibm.watson.developer_cloud</groupId> -->
+<!--       <artifactId>language-translator</artifactId> -->
+<!--       <version>6.11.0</version> -->
+<!--     </dependency> -->
 
 	<dependency>
 	    <groupId>com.google.code.gson</groupId>
