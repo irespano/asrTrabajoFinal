@@ -17,9 +17,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
+
+import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifiedImages;
 
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
+import asr.proyectoFinal.services.ReconocimientoImagenes;
 import asr.proyectoFinal.services.Traductor;
 
 /**
@@ -77,6 +81,10 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
+		
+		String image=request.getParameter("image");
+		ClassifiedImages result=ReconocimientoImagenes.reconocer(image);
+
 	}
 
 }
