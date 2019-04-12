@@ -9,3 +9,4 @@ applications:
   domain: eu-de.mybluemix.net
   services:
   - Irene-cloudantNoSQLDB
+  - Language Translator-trabajofinal
