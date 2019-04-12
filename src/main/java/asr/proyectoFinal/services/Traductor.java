@@ -32,10 +32,8 @@ public class Traductor
 			    .apiKey("yPkfgX761QxGGDjBLNyYQpRTC-S0LHOZKreTFJU3kvfG")
 			    .build();
 
-		LanguageTranslator languageTranslator = new LanguageTranslator("6.11.0", options);
-
-		languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
-		
+		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-12", options);
+		languageTranslator.setEndPoint("https://gateway-fra.watsonplatform.net/language-translator/api");
 		
 		//languageTranslator.setIamCredentials(iamOptions);
 		//languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
