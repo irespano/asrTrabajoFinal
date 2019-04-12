@@ -25,11 +25,20 @@ public class Traductor
 		//languageTranslator.setUsernameAndPassword("f9517b48-edbb-4d41-a984-9333637a96bb","vdMRqsy1jOFV");
 
 		//languageTranslator.setEndPoint("https://gateway.watsonplatform.net/language-translator/api");
-		LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
-		IamOptions iamOptions = new IamOptions.Builder().apiKey("HSi2-Lm9NfasrpTaqzZvHhe-6PfYi4gjyHUJ2dmCK3c0")
-				.build();
-		languageTranslator.setIamCredentials(iamOptions);
+		//LanguageTranslator languageTranslator = new LanguageTranslator("2019-04-09");
+		//IamOptions iamOptions = new IamOptions.Builder().apiKey("HSi2-Lm9NfasrpTaqzZvHhe-6PfYi4gjyHUJ2dmCK3c0").build();
+		
+		IamOptions options = new IamOptions.Builder()
+			    .apiKey("HSi2-Lm9NfasrpTaqzZvHhe-6PfYi4gjyHUJ2dmCK3c0")
+			    .build();
+
+		LanguageTranslator languageTranslator = new LanguageTranslator("6.11.0", options);
+
 		languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
+		
+		
+		//languageTranslator.setIamCredentials(iamOptions);
+		//languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
 		
 		TranslateOptions translateOptions = new
 		TranslateOptions.Builder()
