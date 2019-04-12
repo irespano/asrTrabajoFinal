@@ -29,7 +29,7 @@ public class Traductor
 		//IamOptions iamOptions = new IamOptions.Builder().apiKey("HSi2-Lm9NfasrpTaqzZvHhe-6PfYi4gjyHUJ2dmCK3c0").build();
 		
 		IamOptions options = new IamOptions.Builder()
-			    .apiKey("HSi2-Lm9NfasrpTaqzZvHhe-6PfYi4gjyHUJ2dmCK3c0")
+			    .apiKey("yPkfgX761QxGGDjBLNyYQpRTC-S0LHOZKreTFJU3kvfG")
 			    .build();
 
 		LanguageTranslator languageTranslator = new LanguageTranslator("6.11.0", options);
