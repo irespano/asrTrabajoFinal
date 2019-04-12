@@ -29,7 +29,6 @@ public class Traductor
 		IamOptions iamOptions = new IamOptions.Builder().apiKey("HSi2-Lm9NfasrpTaqzZvHhe-6PfYi4gjyHUJ2dmCK3c0")
 				.build();
 		languageTranslator.setIamCredentials(iamOptions);
-
 		languageTranslator.setEndPoint("https://gateway-lon.watsonplatform.net/language-translator/api");
 		
 		TranslateOptions translateOptions = new
@@ -51,6 +50,7 @@ public class Traductor
 		if(traducciones.size()>0)
 		traduccionPrimera =
 		traducciones.get(0).getAsJsonObject().get("translation").getAsString();
+		
 		return traduccionPrimera;
 	}
 }
