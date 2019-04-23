@@ -29,7 +29,7 @@ import asr.proyectoFinal.services.Traductor;
 /**
  * Servlet implementation class Controller
  */
-@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar"})
+@WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar","/images"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -82,8 +82,12 @@ public class Controller extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 		
+		PrintWriter out = response.getWriter();
+		out.println("<html><head><meta charset=\"UTF-8\"></head><body>");
+		
 		String image=request.getParameter("image");
-		ClassifiedImages result=ReconocimientoImagenes.reconocer(image);
+		String result=ReconocimientoImagenes.reconocer(image);
+		out.println(String.format("La imagen es: %s", result));	
 
 	}
 
