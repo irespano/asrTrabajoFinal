@@ -25,7 +25,7 @@
 
 	<form method="POST" action="/asrTomcatEjemploCloudant/images">
 		<tr>
-			<td>Introduzca la URL de una imagen FUNCIONAA:</td>
+			<td>Introduzca la URL de una imagen:</td>
 <!-- 			<input type="text" class="form-control" id="image"  placeholder="URL de imagen" name="image" size="50"> -->
 			<td><input type="text" name="image" size="30"></td>
 <!-- 			<button type="submit" class="btn btn-outline-primary" name="btnimagen">Enviar</button> -->
