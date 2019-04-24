@@ -24,6 +24,7 @@ import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifiedImag
 import asr.proyectoFinal.dao.CloudantPalabraStore;
 import asr.proyectoFinal.dominio.Palabra;
 import asr.proyectoFinal.services.ReconocimientoImagenes;
+import asr.proyectoFinal.services.TextoAVoz;
 import asr.proyectoFinal.services.Traductor;
 
 /**
@@ -47,6 +48,11 @@ public class Controller extends HttpServlet {
 					  out.println("No hay DB");
 				else
 					out.println("Palabras en la BD Cloudant:<br />" + store.getAll());
+				break;
+				
+			case "/hablar":
+				TextoAVoz.hablar("hola mundo");
+				
 				break;
 				
 			case "/insertar":
