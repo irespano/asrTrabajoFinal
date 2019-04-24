@@ -88,7 +88,7 @@ public class Controller extends HttpServlet {
 		String image=request.getParameter("image");
 		String result=ReconocimientoImagenes.reconocer(image);
 		out.println(String.format("La imagen es de: %s", result));	
-
+		out.println("</html>");
 	}
 
 }
