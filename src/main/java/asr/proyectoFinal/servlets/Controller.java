@@ -51,7 +51,7 @@ public class Controller extends HttpServlet {
 				break;
 				
 			case "/hablar":
-				TextoAVoz.hablar("hola mundo");
+				TextoAVoz.hablar("hola mundo",response);
 				
 				break;
 				
