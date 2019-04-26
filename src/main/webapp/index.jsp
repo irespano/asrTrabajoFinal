@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Veo, veo</title>
+<title>Veo, veo...</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -76,8 +76,13 @@ footer {
 		<div class="row content">
 			<div class="col-sm-2 sidenav"></div>
 			<div class="col-sm-8 text-left">
-				<h1>A new method to learn Spanish</h1>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<h1 style="text-align:center">A new entertaining method to learn Spanish</h1>
+				<p align="justify">This website is intended to help foreign students learn Spanish using a game worldly known: "I spy 
+				with my	little eye", which is the English equivalent to the Spanish "Veo, veo". Inserting the URL of 
+				an image, the Visual Recognition engine will identify what is represented in the picture and tell you
+				in English as if you were playing the game against your computer. After that, you can find out how 
+				that word is written in Spanish and how to pronounce it. In addition, the word will be saved in a 
+				database so you can review later all your new Spanish vocabulary. LET'S PLAY!</p>
 				<hr>
 				<h3>Follow the next steps:</h3>
 				<ul>
@@ -117,8 +122,8 @@ footer {
 					<td><ul><li><a href="hablar">Hablar</a></li></ul></td>
 				</tr>
 				</table>
-				<div style="padding:15px; text-align: center">
-					<p>NOW REPEAT IT OR REVIEW!</p>
+				<div style="padding:10px; text-align: center">
+					<p>NOW REPEAT OR REVIEW!</p>
 				</div>
 				
 				</ul>
