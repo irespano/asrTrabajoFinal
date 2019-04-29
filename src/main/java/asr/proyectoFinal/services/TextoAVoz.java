@@ -48,34 +48,7 @@ public class TextoAVoz {
 			out.close();
 			//in.close();
 			inputStream.close();
-			
-//			try {
-//				
-//	            
-//	            // Se obtiene un Clip de sonido
-//	            Clip sonido = AudioSystem.getClip();
-//	            System.out.println("Entrando...");
-//	            
-//	            // Se carga con un fichero wav
-//	            sonido.open(AudioSystem.getAudioInputStream(new File("C:/Users/IRENE/Downloads/eclipse-jee-neon-2-win32-x86_64/eclipse/hello_world.wav")));
-//	            System.out.println("Entrando2...");
-//	            
-//	            // Comienza la reproducción
-//	            sonido.start();
-//	            System.out.println("Entrando3...");
-//	            
-//	            // Espera mientras se esté reproduciendo.
-//	            while (sonido.isRunning())
-//	                Thread.sleep(1000);
-//	            System.out.println("Entrando4...");
-//	            
-//	            // Se cierra el clip.
-//	            sonido.close();
-//	            System.out.println("Saliendo...");
-//	        } catch (Exception e) {
-//	            System.out.println("" + e);
-//	        }
-			
+						
 			
 		} catch (IOException e) {
 			e.printStackTrace();

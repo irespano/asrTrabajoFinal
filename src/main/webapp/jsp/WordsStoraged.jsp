@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 <title>Veo, veo...</title>
@@ -84,51 +86,7 @@ footer {
 				that word is written in Spanish and how to pronounce it. In addition, the word will be saved in a 
 				database so you can review later all your new Spanish vocabulary. LET'S PLAY!</p>
 				<hr>
-				<h3>Follow the next steps:</h3>
-				<ul>
-				<form method="POST" action="images">
-				<table>
-					<tr>
-					STEP 1
-					</tr>
-					<tr>
-						<td><ul>Introduce the URL of an image:</ul></td>
-					
-						<!--      <input type="text" class="form-control" id="image"  placeholder="URL de imagen" name="image" size="50"> -->
-						<td><input type="text" name="image" size="50"></td>
-						<!--      <button type="submit" class="btn btn-outline-primary" name="btnimagen">Enviar</button> -->
-					</tr>
-				
-				</form>
-				</table>
-				<table>
-<!-- 				<ol start="2"> -->
-				<tr>
-					<td>STEP 2</td>
-				</tr>
-				<tr>
-					<td><ul><li><a href="insertar">Translate</a></li></ul></td>
-				</tr>
-				<tr>
-					<td>STEP 3</td>
-				</tr>
-				<tr>
-					<td><ul><li><a href="hablar">Listen</a></li></ul></td>					
-				</tr>
-				<tr>
-					<td>STEP 4</td>
-				</tr>
-				<tr>
-					<td><ul><li><a href="listar">List</a></li></ul></td>
-				</tr>
-				</table>
-				<div style="padding:10px; text-align: center">
-					<p>NOW REPEAT OR REVIEW!</p>
-				</div>
-				
-				</ul>
-<!-- 				</ol> -->
-				
+				<p>The Spanish words you have learnt are: <b><%=request.getAttribute("almacenadas")%></b>.
 			</div>
 			<div class="col-sm-2 sidenav"></div>
 		</div>

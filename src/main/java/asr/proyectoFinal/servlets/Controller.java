@@ -33,7 +33,8 @@ import asr.proyectoFinal.services.Traductor;
 @WebServlet(urlPatterns = {"/listar", "/insertar", "/hablar", "/images"})
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	String result="";
+	Palabra palabra = new Palabra();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		PrintWriter out = response.getWriter();
@@ -45,20 +46,22 @@ public class Controller extends HttpServlet {
 		{
 			case "/listar":
 				if(store.getDB() == null)
-					  out.println("No hay DB");
+					out.println("No hay DB");
 				else
-					out.println("Palabras en la BD Cloudant:<br />" + store.getAll());
+					//out.println("Palabras en la BD Cloudant:<br />" + store.getAll());
+					request.setAttribute("almacenadas", store.getAll());
+					request.getRequestDispatcher("jsp/WordsStoraged.jsp").forward(request, response);
 				break;
 				
 			case "/hablar":
-				TextoAVoz.hablar("hola mundo",response);
+				TextoAVoz.hablar(palabra.getName(),response);
 				
 				break;
 				
 			case "/insertar":
-				Palabra palabra = new Palabra();
-				String parametro = request.getParameter("palabra");
-
+				
+				//String parametro = request.getParameter("palabra");
+				String parametro=result;
 				if(parametro==null)
 				{
 					out.println("usage: /insertar?palabra=palabra_a_traducir");
@@ -71,10 +74,12 @@ public class Controller extends HttpServlet {
 					}
 					else
 					{
-						parametro = Traductor.translate(parametro, "es", "en", false);
+						parametro = Traductor.translate(parametro, "en", "es", false);
 						palabra.setName(parametro);
 						store.persist(palabra);
-					    out.println(String.format("Almacenada la palabra: %s", palabra.getName()));			    	  
+						request.setAttribute("traduccion", palabra.getName());
+						request.getRequestDispatcher("jsp/WordTranslated.jsp").forward(request, response);
+					    //out.println(String.format("Almacenada la palabra: %s", palabra.getName()));			    	  
 					}
 				}
 				break;
@@ -88,13 +93,16 @@ public class Controller extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//doGet(request, response);
 		
-		PrintWriter out = response.getWriter();
-		out.println("<html><head><meta charset=\"UTF-8\"></head><body>");
+		//PrintWriter out = response.getWriter();
+		//out.println("<html><head><meta charset=\"UTF-8\"></head><body>");
 		
 		String image=request.getParameter("image");
-		String result=ReconocimientoImagenes.reconocer(image);
-		out.println(String.format("La imagen es de: %s", result));	
-		out.println("</html>");
+		result=ReconocimientoImagenes.reconocer(image);
+		System.out.println(result);
+		request.setAttribute("resultado", result);
+		request.getRequestDispatcher("jsp/ImageRecognized.jsp").forward(request, response);
+		//out.println(String.format("La imagen es de: %s", result));	
+		//out.println("</html>");
 	}
 
 }
